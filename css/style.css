@@ -12,13 +12,16 @@ colores #333333
 
 body {
     font-family: Helvetica, Arial, sans-serif;
+    /* display: grid;
+    min-height: 100vh;
+    grid-template-rows:  auto 1fr auto; */
 }
 
 /*  inicio cabecera  */
 .nav-color {
+    /* background-color: #33333348; */
     background-color: var(--color-header-menu);
     padding: 5px;
-
 }
 
 .navbar-toggler-icon {
@@ -26,20 +29,27 @@ body {
 }
 
 .header__logo {
-    width:50px;
+    width: 50px;
     height: 30px;
 }
 
+.offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+    width: 35% !important;
+}
 /* fin inicio cabecera  */
 
 /* inicio sesion banner página */
+/* #main {
+    height: calc(100vh -30px);
+} */
+
 .banner {
     /* padding-top: 38px; */
     position: relative;
-    top: 36px;
+    top: 37px;
     /* display: flex;
-  justify-content: center;
-  align-items: center; */
+    justify-content: center;
+    align-items: center; */
     display: grid;
     align-items: center;
     justify-items: center;
@@ -53,11 +63,12 @@ body {
 
 .banner__text-h {
     line-height: 30px;
+    /* font-size: 2.5rem; */
 }
 
 /* fin sesion banner página */
 
-/* inicio sesion fotos página */
+/*  sesion card página*/
 .cards {
     background-color: var(--color-header-menu);
     padding: 10px 100px;
@@ -69,14 +80,13 @@ body {
     z-index: 10;
 
 }
-
-/* fin sesion fotos página */
+/* fin sesion card página*/
 
 /* inicio sesion menu página */
-
 .menu {
     background-color: #9a6338;
     padding-top: 15px;
+
 }
 
 .menu__title {
@@ -84,7 +94,6 @@ body {
     filter: drop-shadow(2px 1px 1px #faea10);
     /* line-height: 20px; */
 }
-
 /* fin sesion menu página */
 
 /*sesion nosotros Página */
@@ -96,30 +105,33 @@ body {
 .nosotros__title {
     filter: drop-shadow(2px 1px 1px #333333);
     font-style: italic;
+    padding-top: 15px;
 }
-
 /* fin sesion nosotros Página */
 
 /*sesion contacto Página */
-.contacto__title{
+/* .contacto{
+ background-color: red;
+} */
+.contacto__title {
     filter: drop-shadow(2px 1px 1px #333333);
-    font-style: italic; 
+    font-style: italic;
+    padding-top: 15px;
 }
 
 .contacto__container-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 50px;
-    
+    padding-bottom: 10px;
+    /* outline: 1px solid rgb(0, 17, 255); */
+
 }
 
 .contacto__form {
-    /* background-color: #9a633838; */
+    width: 80%;
+    /* outline: 1px solid red; */
     border-radius: 20px;
-    width: 60%;
-    position: relative;
-    bottom: 10px;
 }
 
 .contacto__input {
@@ -130,10 +142,13 @@ body {
     width: 100%;
 }
 
+::placeholder {
+    font-weight: bold;
+}
 /* fin sesion contacto Página */
 
 /* sesion  redes Página */
-.aside__nav{
+.aside__nav {
     /* background-color: red; */
     position: fixed;
     top: 35%;
@@ -142,47 +157,63 @@ body {
     z-index: 10;
     gap: 5px;
 }
-.aside__nav-img{
-    width: 50px;
+
+.aside__nav-img {
+    width: 2rem;
 }
-.aside__nav-img:hover{
-   width: 55px;
+
+.aside__nav-img:hover {
+    width: 2.2rem;
 }
 /*fin sesion redes Página */
 
 /* inicio pie de página */
-.footer{
- background-color: var(--color-header-menu);
- height: 30px;
- display: grid;
- place-content: center;
+.footer {
+    background-color: var(--color-header-menu);
+    height: 30px;
+    display: grid;
+    place-content: center;
+    position: relative;
 }
+
 /* fin inicio pie de página */
 
 @media(max-width:1024px) {
+    /*  sesion card página*/
     .cards {
         /* background-color: yellow; */
         padding: 10px 30px;
 
     }
+    /* fin sesion card página*/
 }
 
 
 @media(max-width:768px) {
+    /* sesion card página*/
     .cards {
         padding: 10px 20px;
         /* background-color: blue; */
 
     }
+    /* fin sesion card página*/
 }
 
 @media(max-width:320px) {
     .cards {
         padding: 20px 0px;
         /* background-color: red; */
-
     }
 
+    /* inicio sesion banner página */
+    .banner__text {
+        filter: drop-shadow(.9px .9px .9px #faea10);
+    }
 
+    .banner__text-h {
+        line-height: 10px;
+        font-size: 0.8rem;
+    }
+    /* finsesion banner página */
 
 }
